@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Brief Página Web</title>
+
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="icon" type="image/gif" href="favicon.gif" />
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <style>
+            .rayaazul {position: absolute; width: 100%; height: 380px; z-index: -1; }
+            .padding { padding: 3% 0 3% 0;}
+            .padding20px {padding: 20px;}
+            i { color: #616161; }
+            .switch {padding: 8px;}
+            .switch label { font-size: 0.9rem; color: rgba(0,0,0,0.87); }
+        </style>
+    </head>
+    <body ng-app="contactApp" class="grey lighten-4">
+            <div class="rayaazul blue"></div>
+            <div class="container">
+                <div class="col s12">
+                    <div class="center-align padding">
+                        <img src="logoemblema2.png" class="responsive-img">
+                    </div>
+                    <div class="card-panel">
+                    <h3 class="center-align" >Brief de diseño web</h3>
+                    <div class="divider"></div>
+                    <br>
+
+                    <div ng-controller="ContactController" class="padding20px">
+
+                        <form ng-submit="submit(contactform)" name="contactform" method="post" action="" role="form">
+                            <div class="row">
+                                
+                                <span class=" " ng-class="{ 'has-error': contactform.p0.$invalid && submitted }">
+                                    <h5>Nombre de empresa</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">account_balance</i>
+                                        <input ng-model="formData.p0" id="p0" name="p0" type="text">
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+                                
+                                <span class=" " ng-class="{ 'has-error': contactform.p1.$invalid && submitted }">
+                                    <h5>¿Cuáles son tus productos y servicios?</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">work</i>
+                                        <input ng-model="formData.p1" id="p1" name="p1" type="text">
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+                                
+                                <span class=" " ng-class="{ 'has-error': contactform.p2.$invalid && submitted }">
+                                    <h5>¿En qué año se fundó la empresa?</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">date_range</i>
+                                        <input ng-model="formData.p2" id="p2" name="p2" type="text">
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+                                
+                                <span class=" " ng-class="{ 'has-error': contactform.p3.$invalid && submitted }">
+                                    <h5>¿Qué valores destacaría de su empresa?</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">verified_user</i>
+                                        <input ng-model="formData.p3" id="p3" name="p3" type="text">
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+                                
+                                <span class=" " ng-class="{ 'has-error': contactform.p4.$invalid && submitted }">
+                                    <h5>¿Quién es su público objetivo?</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">group</i>
+                                        <input ng-model="formData.p4" id="p4" name="p4" type="text">
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+                                
+                                <span class=" " ng-class="{ 'has-error': contactform.p5.$invalid && submitted }">
+                                    <h5>¿Cuáles son sus principales competidores en línea?</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">adb</i>
+                                        <input ng-model="formData.p5" id="p5" name="p5" type="text">
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+                                
+                                <span class=" " ng-class="{ 'has-error': contactform.p6.$invalid && submitted }">
+                                    <h5>¿Cual sería el principal motivo por la cual visitarian su página?</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">search</i>
+                                        <select ng-model="formData.p6" id="p6" name="p6"  multiple>
+                                            <option value="" disabled selected>Seleccione</option>
+                                            <option value="Investigación">Investigación</option>
+                                            <option value="Información">Información</option>
+                                            <option value="Entretenimiento">Entretenimiento</option>
+                                            <option value="Noticias">Noticias</option>
+                                            <option value="Precios de productos">Precios de productos</option>
+                                            <option value="Descargas">Descargas</option>
+                                            <option value="Compra online">Compra online</option>
+                                            <option value="Obtener información de contacto">Obtener información de contacto</option>
+                                        </select>
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+
+                                <span class=" " ng-class="{ 'has-error': contactform.p7.$invalid && submitted }">
+                                    <h5>Describa su página ideal </h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">computer</i>
+                                        <textarea ng-model="formData.p7" id="p7" name="p7"  class="materialize-textarea"></textarea>
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+
+                                <span class=" " ng-class="{ 'has-error': contactform.p8.$invalid && submitted }">
+                                    <h5>¿Cuantas secciones debe de tener y cuales?</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">format_list_numbered</i>
+                                        <textarea ng-model="formData.p8" id="p8" name="p8"  class="materialize-textarea"></textarea>
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+                                
+                                <span class=" ">
+                                    <h5> <i class="material-icons prefix">camera</i>¿Qué valores quiere comunicar con el diseño de su página?</h5>
+                                    <div class="left-align">
+                                        <div class="row">
+                                            <div class="col s3 m2 l2">
+                                                <p class="left">Masculino</p>
+                                            </div>
+                                            <div class="col s6 m6 l6">
+                                                <p class="range-field">
+                                                  <input type="range" min="0" max="100"  ng-model="formData.p91" id="p91" name="p91" />
+                                                </p>
+                                            </div>
+                                            <div class="col s3 m2 l2">
+                                                <p class="right">Femenino</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s3 m2 l2">
+                                                <p class="left">Tradicional</p>
+                                            </div>
+                                            <div class="col s6 m6 l6">
+                                                <p class="range-field">
+                                                  <input type="range" min="0" max="100"  ng-model="formData.p92" id="p92" name="p92" />
+                                                </p>
+                                            </div>
+                                            <div class="col s3 m2 l2">
+                                                <p class="right">Moderno</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s3 m2 l2">
+                                                <p class="left">Profesional</p>
+                                            </div>
+                                            <div class="col s6 m6 l6">
+                                                <p class="range-field">
+                                                  <input type="range" min="0" max="100"  ng-model="formData.p93" id="p93" name="p93" />
+                                                </p>
+                                            </div>
+                                            <div class="col s3 m2 l2">
+                                                <p class="right">Personal</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s3 m2 l2">
+                                                <p class="left">Serio</p>
+                                            </div>
+                                            <div class="col s6 m6 l6">
+                                                <p class="range-field">
+                                                  <input type="range" min="0" max="100"  ng-model="formData.p94" id="p94" name="p94" />
+                                                </p>
+                                            </div>
+                                            <div class="col s3 m2 l2">
+                                                <p class="right">Amigable</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col s3 m2 l2">
+                                                <p class="left">Exclusiva</p>
+                                            </div>
+                                            <div class="col s6 m6 l6">
+                                                <p class="range-field">
+                                                  <input type="range" min="0" max="100"  ng-model="formData.p95" id="p95" name="p95" />
+                                                </p>
+                                            </div>
+                                            <div class="col s3 m2 l2">
+                                                <p class="right">Inclusiva</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </span>
+                            </div>
+                    <div class="divider"></div>
+                            <div class="row">
+
+                                <span class=" " ng-class="{ 'has-error': contactform.p10.$invalid && submitted }">
+                                    <h5>¿Qué páginas de referencia le gusta? ¿Qué le gusta de esas páginas?</h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">thumb_up</i>
+                                        <textarea ng-model="formData.p10" id="p10" name="p10"  class="materialize-textarea"></textarea>
+                                    </div>
+
+                                </span>
+                            </div>
+                            
+                    <div class="divider"></div>
+                            <div class="row">
+
+                                <span class=" " ng-class="{ 'has-error': contactform.p11.$invalid && submitted }">
+                                    <h5>Otros datos que puedan ser importantes para el proceso de diseño. </h5>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">comment</i>
+                                        <textarea ng-model="formData.p11" id="p11" name="p11"  class="materialize-textarea"></textarea>
+                                    </div>
+
+                                </span>
+                            </div>
+                            <div class="row center-align">
+                                <button type="submit" class="btn blue" ng-disabled="submitButtonDisabled"><i class="material-icons left white-text">send</i>{{ searchButtonText }}</button>
+                            </div>
+                        </form>
+                        <h4 ng-class="result" class="white-text center-align" style="padding: 15px; margin: 0;">
+                            {{ resultMessage }}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="controllers.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('textarea').trigger('autoresize');
+                $('select').material_select();
+            });
+        </script>
+    </body>
+</html>
